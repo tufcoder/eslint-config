@@ -1,6 +1,6 @@
 {
   "name": "@tufcoder/eslint-config",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "type": "module",
   "license": "MIT",
   "author": "Oswaldo Castro",
@@ -16,6 +16,13 @@
     "shareable-config",
     "styleguide",
     "tufcoder"
+  ],
+  "files": [
+    "eslint.config.node.mjs",
+    "eslint.config.react.mjs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "lint": "eslint .",
