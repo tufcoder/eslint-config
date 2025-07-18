@@ -1,10 +1,10 @@
 {
   "name": "@tufcoder/eslint-config",
-  "version": "1.0.5",
+  "version": "1.0.6",
+  "type": "module",
+  "license": "MIT",
+  "author": "Oswaldo Castro",
   "description": "A shareable ESLint and Prettier configuration for JavaScript and TypeScript projects, following Tufcoder's code style and best practices.",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -17,16 +17,9 @@
     "styleguide",
     "tufcoder"
   ],
-  "author": "Oswaldo Castro",
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    "./node": {
-      "import": "./eslint.config.node.mjs"
-    },
-    "./react": {
-      "import": "./eslint.config.react.mjs"
-    }
+  "scripts": {
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master"
   },
   "peerDependencies": {
     "@eslint/js": "^9.31.0",
@@ -37,5 +30,13 @@
     "globals": "^16.3.0",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^8.37.0"
+  },
+  "exports": {
+    "./node": {
+      "import": "./eslint.config.node.mjs"
+    },
+    "./react": {
+      "import": "./eslint.config.react.mjs"
+    }
   }
 }
