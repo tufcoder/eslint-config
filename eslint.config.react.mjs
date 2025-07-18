@@ -5,16 +5,14 @@ import { defineConfig } from 'eslint/config'
 import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
 import reactPlugin from 'eslint-plugin-react'
-import reactHooksPlugin from 'eslint-plugin-react-hooks'
 
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    plugins: { js, prettier: prettierPlugin, react: reactPlugin, 'react-hooks': reactHooksPlugin },
+    plugins: { js, prettier: prettierPlugin, react: reactPlugin },
     extends: [
       'js/recommended',
       'plugin:react/recommended',
-      'plugin:react-hooks/recommended',
       prettierConfig,
     ],
     languageOptions: { globals: globals.browser },
