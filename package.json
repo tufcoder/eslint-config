@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "release": "standard-version",
-    "postrelease": "git push --follow-tags origin master"
+    "postrelease": "git push --follow-tags origin master",
+    "lint": "eslint ."
   },
   "peerDependencies": {
     "@eslint/js": "^9.31.0",
