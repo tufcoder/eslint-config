@@ -29,6 +29,12 @@
       "import": "./eslint.config.react.mjs"
     }
   },
+  "files": [
+    "eslint.config.node.mjs",
+    "eslint.config.react.mjs",
+    "README.md",
+    "LICENSE"
+  ],
   "peerDependencies": {
     "@eslint/js": "^9.31.0",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
