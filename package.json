@@ -1,6 +1,6 @@
 {
   "name": "@tufcoder/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A shareable ESLint and Prettier configuration for JavaScript and TypeScript projects, following Tufcoder's code style and best practices.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
