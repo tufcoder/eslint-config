@@ -2,6 +2,27 @@
 
 A shareable ESLint and Prettier configuration for JavaScript and TypeScript projects, following Tufcoder's code style and best practices.
 
+## 🚀 Quick Install
+
+Install ESLint and this config package:
+```sh
+npm install --save-dev eslint @tufcoder/eslint-config
+```
+
+Then, install the required peer dependencies for your project type:
+
+- 🟢 **Node.js:**
+  ```sh
+  npm install --save-dev @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser globals eslint-plugin-prettier eslint-config-prettier
+  ```
+- ⚛️ **React:**
+  ```sh
+  npm install --save-dev @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser globals eslint-plugin-prettier eslint-config-prettier eslint-plugin-react
+  ```
+
+> ⚠️ Why is this needed? 
+> npm/yarn and ESLint require that plugins and parsers are installed in the consumer project, even when using a shared config package.
+
 ## ✨ Features
 
 - ESLint recommended rules
@@ -9,19 +30,6 @@ A shareable ESLint and Prettier configuration for JavaScript and TypeScript proj
 - TypeScript support
 - Node.js globals
 - React support (see below)
-
-## ⚡ Installation
-
-First, install ESLint and this config:
-
-```sh
-npm install --save-dev eslint @tufcoder/eslint-config
-```
-
-> ⚠️ **Note:** If you see peer dependency warnings, install the suggested packages as well:
-> ```sh
-> npm install --save-dev @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser globals eslint-plugin-prettier eslint-config-prettier eslint-plugin-react
-> ```
 
 ## 🛠️ Usage
 
