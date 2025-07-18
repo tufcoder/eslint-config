@@ -10,14 +10,14 @@ import reactPlugin from 'eslint-plugin-react'
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    plugins: { js, prettier: prettierPlugin, react: reactPlugin, '@typescript-eslint': tseslint },
+    plugins: { js, prettier: prettierPlugin, react: reactPlugin, '@typescript-eslint': tseslint.default ?? tseslint },
     extends: [
       'js/recommended',
       'plugin:react/recommended',
       'plugin:@typescript-eslint/recommended',
       prettierConfig,
     ],
-    parser: tsParser,
+    parser: tsParser.default ?? tsParser,
     languageOptions: { globals: globals.browser },
     settings: {
       react: {

@@ -9,9 +9,9 @@ import prettierConfig from 'eslint-config-prettier'
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
-    plugins: { js, prettier: prettierPlugin, '@typescript-eslint': tseslint },
+    plugins: { js, prettier: prettierPlugin, '@typescript-eslint': tseslint.default ?? tseslint },
     extends: ['js/recommended', 'plugin:@typescript-eslint/recommended', prettierConfig],
-    parser: tsParser,
+    parser: tsParser.default ?? tsParser,
     rules: {
       'prettier/prettier': [
         'error',
