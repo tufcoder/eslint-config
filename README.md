@@ -1,8 +1,8 @@
-# @tufcoder/eslint-config
+# @tufcoder/eslint-config 🎉
 
 A shareable ESLint and Prettier configuration for JavaScript and TypeScript projects, following Tufcoder's code style and best practices.
 
-## Features
+## ✨ Features
 
 - ESLint recommended rules
 - Prettier integration for code formatting
@@ -10,7 +10,7 @@ A shareable ESLint and Prettier configuration for JavaScript and TypeScript proj
 - Node.js globals
 - React support (see below)
 
-## Installation
+## ⚡ Installation
 
 First, install ESLint and this config:
 
@@ -18,48 +18,58 @@ First, install ESLint and this config:
 npm install --save-dev eslint @tufcoder/eslint-config
 ```
 
-> **Note:** If you see peer dependency warnings, install the suggested packages as well:
+> ⚠️ **Note:** If you see peer dependency warnings, install the suggested packages as well:
 > ```sh
-> npm install --save-dev @eslint/js typescript-eslint globals eslint-plugin-prettier eslint-config-prettier eslint-plugin-react
+> npm install --save-dev @eslint/js @typescript-eslint/eslint-plugin @typescript-eslint/parser globals eslint-plugin-prettier eslint-config-prettier eslint-plugin-react
 > ```
 
-## Usage
+## 🛠️ Usage
 
-### Node.js projects
+### 🟢 Node.js projects
 
-Create a file named `eslint.config.mjs` in the root of your project with the following content:
+Create a file named `eslint.config.mjs` in your project root with the following content:
 
 ```js
 import config from '@tufcoder/eslint-config/node'
 export default config
 ```
 
-### React projects
+### ⚛️ React projects
 
-Create a file named `eslint.config.mjs` in the root of your project with the following content:
+Create a file named `eslint.config.mjs` in your project root with the following content:
 
 ```js
 import config from '@tufcoder/eslint-config/react'
 export default config
 ```
 
-## Prettier Customization
+## 💾 VS Code: Format on Save
 
-If you want to customize Prettier rules, create a `.prettierrc.json` in your project root:
+To automatically format your files on save in VS Code, add the following to your workspace or user `settings.json`:
 
 ```json
 {
-  "semi": false,
-  "singleQuote": true,
-  "trailingComma": "all",
-  "printWidth": 100,
-  "tabWidth": 2,
-  "arrowParens": "always",
-  "endOfLine": "lf"
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+  }
 }
 ```
 
-## Formatting
+## ⚙️ Prettier Customization
+
+If you want to customize Prettier rules, create a `.prettierrc.json` in your project root. For example, you can override or add options like:
+
+```json
+{
+  "bracketSpacing": false, // Remove espaços entre chaves: {foo: bar}
+  "jsxSingleQuote": true, // Usa aspas simples em JSX
+  "proseWrap": "always", // Sempre quebra linhas em textos longos
+  "htmlWhitespaceSensitivity": "ignore", // Ignora sensibilidade a espaços em HTML
+  "quoteProps": "consistent" // Adiciona aspas em todas as propriedades quando necessário
+}
+```
+
+## 🧹 Formatting
 
 To automatically fix and format your code, run:
 
@@ -67,6 +77,6 @@ To automatically fix and format your code, run:
 npx eslint . --fix
 ```
 
-## License
+## 📄 License
 
-MIT © Oswaldo
+MIT © [Oswaldo Castro](https://github.com/tufcoder)
