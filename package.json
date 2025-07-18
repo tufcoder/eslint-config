@@ -18,7 +18,8 @@
     "tufcoder"
   ],
   "scripts": {
-    "release": "standard-version"
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master"
   },
   "exports": {
     "./node": {
