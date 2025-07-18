@@ -8,6 +8,7 @@ A shareable ESLint and Prettier configuration for JavaScript and TypeScript proj
 - Prettier integration for code formatting
 - TypeScript support
 - Node.js globals
+- React support (see below)
 
 ## Installation
 
@@ -19,17 +20,30 @@ npm install --save-dev eslint @tufcoder/eslint-config
 
 > **Note:** If you see peer dependency warnings, install the suggested packages as well:
 > ```sh
-> npm install --save-dev @eslint/js typescript-eslint globals eslint-plugin-prettier eslint-config-prettier
+> npm install --save-dev @eslint/js typescript-eslint globals eslint-plugin-prettier eslint-config-prettier eslint-plugin-react
 > ```
 
 ## Usage
 
+### Node.js projects
+
 Create a file named `eslint.config.mjs` in the root of your project with the following content:
 
 ```js
-import config from '@tufcoder/eslint-config'
+import config from '@tufcoder/eslint-config/node'
 export default config
 ```
+
+### React projects
+
+Create a file named `eslint.config.mjs` in the root of your project with the following content:
+
+```js
+import config from '@tufcoder/eslint-config/react'
+export default config
+```
+
+## Prettier Customization
 
 If you want to customize Prettier rules, create a `.prettierrc.json` in your project root:
 
