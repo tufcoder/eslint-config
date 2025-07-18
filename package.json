@@ -17,16 +17,8 @@
     "styleguide",
     "tufcoder"
   ],
-  "files": [
-    "eslint.config.node.mjs",
-    "eslint.config.react.mjs",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md"
-  ],
   "scripts": {
-    "release": "standard-version",
-    "postrelease": "git push --follow-tags origin master"
+    "release": "standard-version"
   },
   "exports": {
     "./node": {
