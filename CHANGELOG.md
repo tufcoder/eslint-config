@@ -1,5 +1,14 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### 1.0.6 (2025-07-18)
+
+
+### Bug Fixes
+
+* package.json version ([f5b6925](https://github.com/tufcoder/eslint-config/commit/f5b692518eb2ea728d8e90e7b343be5fe2a3582c))
+
 ## [1.0.5] - 2025-07-18
 - refactor: update peerDependencies
 
