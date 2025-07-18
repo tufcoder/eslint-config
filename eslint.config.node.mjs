@@ -1,6 +1,5 @@
 import js from '@eslint/js'
 import globals from 'globals'
-import * as tseslint from '@typescript-eslint/eslint-plugin'
 import { defineConfig } from 'eslint/config'
 import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
@@ -29,5 +28,4 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     languageOptions: { globals: globals.node },
   },
-  tseslint.configs.recommended,
 ])
