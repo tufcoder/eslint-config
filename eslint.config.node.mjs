@@ -3,12 +3,27 @@ import globals from 'globals'
 import { defineConfig } from 'eslint/config'
 import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
+import * as parser from '@typescript-eslint/parser'
 
 export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     plugins: { js, prettier: prettierPlugin },
     extends: ['js/recommended', prettierConfig],
+    languageOptions: {
+      parser,
+      globals: globals.node,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: {
+        projectService: true,
+        warnOnUnsupportedTypeScriptVersion: true,
+        ecmaFeatures: {
+          jsx: false,
+          globalReturn: false,
+        },
+      },
+    },
     rules: {
       'prettier/prettier': [
         'error',
@@ -23,9 +38,5 @@ export default defineConfig([
         },
       ],
     },
-  },
-  {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
-    languageOptions: { globals: globals.node },
   },
 ])
